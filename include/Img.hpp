@@ -2,6 +2,7 @@
 #define __IMG_HPP__
 #include <fstream>
 
+/// @brief  Simple img creator with @c char[] extracting it's own file format.
 class Img
 {
 private:

@@ -20,6 +20,13 @@ Img::Img(std::string file_name)
     img = nullptr;
 }
 
+/**
+ *  @brief  Initialice the @c Img with the given file.
+ *  @return the flag if the format of the file is incorrect.
+ *
+ *  Calls @c std::fstream(__file_name) extracing the characters, the flag indicates an error in the format.
+ *  If the char img is set incorrectly it din't appear. All of the array is the heap.
+ */
 int Img::init()
 {
     std::fstream file;
