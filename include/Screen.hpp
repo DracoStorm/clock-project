@@ -1,5 +1,6 @@
 #ifndef __SCREEN_HPP__
 #define __SCREEN_HPP__
+#include <iostream>
 #include "Img.hpp"
 
 class Screen
