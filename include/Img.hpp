@@ -1,7 +1,6 @@
 #ifndef __IMG_HPP__
 #define __IMG_HPP__
 #include <fstream>
-#include "Screen.hpp"
 
 /// @brief  Simple img creator with @c char[] extracting it's own file format.
 class Img
