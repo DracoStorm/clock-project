@@ -10,8 +10,9 @@ private:
 
 public:
     Screen(int width, int height);
-    void draw(Img img, int x, int y);
+    void place(Img img, int x, int y);
     void frame(char character);
+    void unflip();
     void clear();
     ~Screen();
 };
