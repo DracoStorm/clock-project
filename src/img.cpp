@@ -22,12 +22,12 @@ Img::Img(std::string file_name)
 
 /**
  *  @brief  Initialice the @c Img with the given file.
- *  @return the flag if the format of the file is incorrect.
+ *  @return booleam if the format of the file is correct.
  *
  *  Calls @c std::fstream(__file_name) extracing the characters, the flag indicates an error in the format.
  *  If the char img is set incorrectly it din't appear. All of the array is the heap.
  */
-int Img::init()
+bool Img::init()
 {
     std::fstream file;
     file.open(file_name);
@@ -41,14 +41,14 @@ int Img::init()
             char str_num[3] = {file.get(), file.get(), file.get()};
             int num = to_num(str_num);
             if (num == INT_MIN)
-                return 1;
+                return false;
             width = num + 1;
         }
         else
-            return 1;
+            return false;
     }
     else
-        return 1;
+        return false;
     file >> c;
     if (c == 'H')
     {
@@ -62,10 +62,10 @@ int Img::init()
             height = num;
         }
         else
-            return 1;
+            return false;
     }
     else
-        return 1;
+        return false;
 
     char *cols[height];
     for (int i = 0; i < height; i++)
@@ -74,7 +74,7 @@ int Img::init()
         file.getline(cols[i], width);
     }
     img = cols;
-    return 0;
+    return true;
 }
 
 int const Img::getWidth()
