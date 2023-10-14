@@ -15,9 +15,9 @@ private:
 public:
     Img(std::string file_name);
     bool init();
-    int const getWidth();
-    int const getHeight();
-    std::string const getFileName();
+    const int getWidth();
+    const int getHeight();
+    const std::string getFileName();
     ~Img();
 };
 

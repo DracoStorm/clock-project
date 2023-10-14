@@ -76,17 +76,17 @@ bool Img::init()
     return true;
 }
 
-int const Img::getWidth()
+const int Img::getWidth()
 {
     return width;
 }
 
-int const Img::getHeight()
+const int Img::getHeight()
 {
     return height;
 }
 
-std::string const Img::getFileName()
+const std::string Img::getFileName()
 {
     return file_name;
 }
