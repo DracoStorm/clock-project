@@ -42,7 +42,7 @@ bool Img::init()
             int num = to_num(str_num);
             if (num == INT_MIN)
                 return false;
-            width = num + 1;
+            width = num;
         }
         else
             return false;
@@ -70,8 +70,8 @@ bool Img::init()
     img = new char *[height];
     for (int i = 0; i < height; i++)
     {
-        img[i] = new char[width];
-        file.getline(img[i], width);
+        img[i] = new char[width + 1];
+        file.getline(img[i], width + 1);
     }
     return true;
 }
