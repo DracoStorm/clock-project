@@ -11,7 +11,9 @@ private:
 
 public:
     Screen(int width, int height);
-    void place(Img &img, int x, int y);
+    const int getWidth();
+    const int getHeigh();
+    void place(const Img &img, int x, int y);
     void frame(char character);
     void unflip();
     void clear();
