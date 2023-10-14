@@ -67,13 +67,12 @@ bool Img::init()
     else
         return false;
 
-    char *cols[height];
+    img = new char *[height];
     for (int i = 0; i < height; i++)
     {
-        cols[i] = new char[width];
-        file.getline(cols[i], width);
+        img[i] = new char[width];
+        file.getline(img[i], width);
     }
-    img = cols;
     return true;
 }
 
